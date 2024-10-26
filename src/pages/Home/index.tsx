@@ -1,7 +1,12 @@
-import { Container } from "./styles"
+import { Container, InputText, Submit, Title, Video } from "./styles"
 
 export const Home = () => {
     return (
-        <Container> dsa z</Container>
+        <Container>
+            <Title> Veja o vídeo! </Title>
+            <Video />
+            <InputText placeholder="Digite seu nome..." required/>
+            <Submit> Confirmar presença! </Submit>
+        </Container>
     )
 }
