@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 
+import img from "./../../assets/img/background.png";
+
 export const Container = styled.div`
     position: relative;
     display: flex;
@@ -12,13 +14,15 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
 
-    background-color: ${({theme}) => theme.COLORS.PRIMARY_MAIN};
+    background: url(${img});
+    background-size: cover;
+    background-repeat: no-repeat;
 `
 
 export const Title = styled.h1`
     font-size: 64px;
     font-weight: 800;
-    color: ${({theme}) => theme.COLORS.PRIMARY_LIGHTER}
+    color: ${({theme}) => theme.COLORS.SECUNDARY_LIGHTER}
 `
 
 export const Video = styled.div`
@@ -63,6 +67,7 @@ export const Submit = styled.button`
         ${({theme}) => css`
             background-color: ${theme.COLORS.PRIMARY_LIGHT};
         `}
+        color: white;
         transform: scale(110%);
     }
 
