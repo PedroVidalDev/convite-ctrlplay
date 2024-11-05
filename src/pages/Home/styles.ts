@@ -22,6 +22,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
     font-size: 64px;
     font-weight: 800;
+    text-align: center;
     color: ${({theme}) => theme.COLORS.SECUNDARY_LIGHTER}
 `
 
@@ -37,6 +38,7 @@ export const Video = styled.div`
 
 export const InputText = styled.input`
     width: 40%;
+    min-width: 330px;
     height: 50px;
     border-radius: 10px;
     border: 0;
@@ -51,6 +53,7 @@ export const InputText = styled.input`
 
 export const Submit = styled.button`
     width: 30%;
+    min-width: 240px;
     height: 50px;
     border-radius: 10px;
     border: 0;
