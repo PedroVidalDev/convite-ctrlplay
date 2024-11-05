@@ -1,6 +1,7 @@
 import { Controller, useForm } from "react-hook-form"
 import { Container, InputText, Submit, Title, Video } from "./styles"
 import { NameForm } from "../../types/nameForm"
+import axios from "axios"
 
 export const Home = () => {
 
@@ -10,8 +11,8 @@ export const Home = () => {
         }
     })
 
-    const onSubmit = (data: NameForm) => {
-        console.log(data)
+    const onSubmit = async (data: NameForm) => {
+        await axios.post("http://localhost:3000/send-email", data);
     }
 
     return (
