@@ -1,9 +1,11 @@
-import { Controller, useForm } from "react-hook-form"
-import { Container, InputText, Submit, Title, Video } from "./styles"
-import { NameForm } from "../../types/nameForm"
 import axios from "axios"
-import { ToastContainer, toast } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
+import { Controller, useForm } from "react-hook-form"
+import { ToastContainer, toast } from "react-toastify"
+
+import { NameForm } from "../../types/nameForm"
+
+import { Container, InputText, Submit, Title, VideoPlayer } from "./styles"
 
 export const Home = () => {
 
@@ -49,7 +51,11 @@ export const Home = () => {
                 theme="light"
             />
             <Title> Veja o vídeo! </Title>
-            <Video />
+            
+            <VideoPlayer controls width="90%" height="90%">
+                <source src={`${process.env.PUBLIC_URL}/video/video.mp4`} type="video/mp4" />
+            </VideoPlayer>
+            
             <Controller
                 control={control}
                 name="name"

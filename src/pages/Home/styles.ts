@@ -26,14 +26,17 @@ export const Title = styled.h1`
     color: ${({theme}) => theme.COLORS.SECUNDARY_LIGHTER}
 `
 
-export const Video = styled.div`
+export const VideoPlayer = styled.video`
+    display: flex;
+
     width: 50%;
     height: 50%;
 
+    align-items: center;
+    justify-content: center;
+
     border-radius: 20px;
     border: 0;
-
-    background-color: ${({theme}) => theme.COLORS.NEUTRAL_50};
 `
 
 export const InputText = styled.input`
