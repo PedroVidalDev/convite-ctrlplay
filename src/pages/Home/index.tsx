@@ -17,7 +17,7 @@ export const Home = () => {
 
     const onSubmit = async (data: NameForm) => {
         try{
-            await axios.post("http://15.229.118.53:3000/send-email", data);
+            await axios.post("https://15.229.118.53:3000/send-email", data);
             toast("Presença confirmada com sucesso!", {
                 onClose: () => {
                     setTimeout(() => {
