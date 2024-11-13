@@ -15,17 +15,9 @@ export const Home = () => {
         }
     })
 
-    const instance = axios.create({
-      baseURL: 'https://18.230.75.174:3000',
-      httpsAgent: new https.Agent({  
-        rejectUnauthorized: false
-        })
-    });
-
     const onSubmit = async (data: NameForm) => {
         try{
-
-            await instance.post("/send-email", data);
+            await axios.post("http://18.230.75.174:3000/send-email", data);
             toast("Presença confirmada com sucesso!", {
                 onClose: () => {
                     setTimeout(() => {
