@@ -23,7 +23,7 @@ export const Home = () => {
                 rejectUnauthorized: false
               })
             });
-            await instance.post("https://18.230.75.174:3000/send-email", data);
+            await instance.post("/send-email", data);
             toast("Presença confirmada com sucesso!", {
                 onClose: () => {
                     setTimeout(() => {
