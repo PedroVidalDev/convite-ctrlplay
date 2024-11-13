@@ -9,7 +9,7 @@ import { Container, InputText, Submit, Title, VideoPlayer } from "./styles"
 
 export const Home = () => {
 
-    const { control, handleSubmit, formState: {errors} } = useForm<NameForm>({
+    const { control, handleSubmit } = useForm<NameForm>({
         defaultValues: {
             name: ''
         }
