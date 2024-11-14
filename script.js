@@ -1,4 +1,5 @@
 const form = document.querySelector("#form");
+const body = document.querySelector("body");
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -16,5 +17,9 @@ form.addEventListener("submit", async (event) => {
         body: json
     });
 
-    window.location.reload(true);
+    body.innerHTML = `<h1> acho que agr sei quem vc eh </h1>`;
+
+    setTimeout(() => {
+        window.location.reload(true);
+    }, 1000)
 })
