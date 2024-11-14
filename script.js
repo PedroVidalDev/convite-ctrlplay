@@ -15,13 +15,18 @@ form.addEventListener("submit", async (event) => {
     console.log(object)
     console.log(json)
 
-    await fetch("http://18.228.5.14:3300/send-email", {
-        method: "POST",
-        headers: {"Content-type": "application/json"},
-        body: json
-    });
+    try{
+        await fetch("http://18.228.5.14:3300/send-email", {
+            method: "POST",
+            headers: {"Content-type": "application/json"},
+            body: json
+        });
+    
+        body.innerHTML = `<h1> Enviado! </h1>`;
+    } catch(error) {
+        body.innerHTML = `<h1> Deu erro :( </h1>`;
+    }
 
-    body.innerHTML = `<h1> Enviado! </h1>`;
 
     setTimeout(() => {
         window.location.reload(true);
