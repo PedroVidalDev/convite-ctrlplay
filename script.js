@@ -7,8 +7,12 @@ form.addEventListener("submit", async (event) => {
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    await fetch("http://18.228.5.14:3300/send-email", {
+    console.log(object)
+    console.log(json)
+
+    await fetch("http://localhost:3300/send-email", {
         method: "POST",
+        headers: {"Content-type": "application/json"},
         body: json
     });
 
