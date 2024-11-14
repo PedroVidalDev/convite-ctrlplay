@@ -24,11 +24,14 @@ body {
     justify-content: center;
 
     background-color: #000413;
+
+    gap: 20px;
 }
 
 h1{
     font-size: 7rem;
     color: #ff7b22;
+    text-align: center;
 }
 
 form {
@@ -47,7 +50,7 @@ form div {
     flex-direction: column;
 
     width: 100%;
-    min-width: 400px;
+    min-width: 300px;
 }
 
 label {
