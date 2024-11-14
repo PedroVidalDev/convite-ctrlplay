@@ -21,9 +21,7 @@ form.addEventListener("submit", async (event) => {
         body: json
     });
 
-    body.innerHTML = `<h1> acho que agr sei quem vc eh </h1>`;
-
     setTimeout(() => {
         window.location.reload(true);
-    }, 1000)
+    }, 500)
 })
